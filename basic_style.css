@@ -49,10 +49,12 @@ body {
 	color: #105b63;
 }
 
-.wrapper #nav_bar a {
+.wrapper #nav_bar p a:link, a:visited, a:active, a:hover {
 		Xmargin-right: 2em;
 	margin-left: 2em;
+	color: #105b63;
 	text-decoration: none;
+	font-weight: normal;
 }
 
 .wrapper #dumb {
@@ -63,7 +65,7 @@ body {
 }
 
 .wrapper #footer { 
-	padding: 0 10px 0 20px;
+		Xpadding: 0 10px 0 20px;
 		Xbackground: #fff;
 	background-image: url(pics/tile.png);
 		Xborder-top: thin dashed #006;
@@ -79,14 +81,58 @@ body {
 	text-align: center;
 }
 
-.wrapper #footer p a {
-	color: #000;
-	margin-right: 5em;
+.wrapper #footer p a:link, a:visited, a:active, a:hover {
+	color: #105b63;
+	margin-right: 2em;
 	font-weight: bolder;
 	text-decoration: none;
 }
 
 .wrapper #extra {
+	width: 780px;
+	color: #000;
+	height: 200px;
+}
 
+#extra ul {
+	color: #105b63;
+}
 
+#extra li {
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+	margin: 2px;
+}
+
+#extra h3 {
+	color: #bd4932;
+	font-variant: small-caps;
+	padding-left: 30px;
+	text-decoration: underline;
+}
+
+.wrapper #left {
+	float: left;
+	width: 34%;
+	margin-left: 33%;
+		Xbackground-color: #033;
+}
+
+.wrapper #mid {
+	float: left;
+	width: 33%;
+	margin-left: -67%;
+		Xbackground-color: #099;
+}
+
+.wrapper #right {
+	float: left;
+	width: 33%;
+	padding-top: 20px;
+		Xbackground-color: #993;
+}
+
+.wrapper #right img {
+	padding: 2px;
 }
