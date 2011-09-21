@@ -2,26 +2,32 @@
 
 body {
 	font: 100% Verdana, Arial, Helvetica, sans-serif;
-	background: #fff;
+	background: #fffad5;
+		Xbackground-image: url(pics/tile.png);
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	color: #000;
+	color: #fff;
 }
 
 .wrapper #container { 
 	width: 780px;
-	background: #fff;
+	background: #fffad5;
 	margin: 0 auto;
-	Xborder: 1px solid #000;
+		Xborder: 1px solid #000;
 	text-align: left;
 } 
 
 .wrapper #header { 
-	background: #fff;
+		Xcolor: #00F;
+		Xbackground: #00F;
+		Xbackground-color: #00F;
+	background-image: url(pics/tile.png);
 	height: 75px;
-	padding: 0 10px 0 20px;
+		Xpadding: 0 10px 0 20px;
 	margin-top: 10px;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
 }
 
 .wrapper #header img {
@@ -30,42 +36,57 @@ body {
 }
 
 .wrapper #nav_bar {
-	Xheight: 30px;
-	Xbackground: #093;
-	border-bottom: thin dashed #006;
+		Xbackground: #093;
+	background: #fff;
+		Xwidth: 780px;
+		Xheight: 59px;
+	border-bottom: thin solid #eee;
 }
 
 .wrapper #nav_bar p {
-	Xpadding: 0 10px 0 20px;
+	padding: 10px 10px 0 20px;
 	font-size: 12px;
+	color: #105b63;
 }
 
 .wrapper #nav_bar a {
-	color: #006;
-	margin-right: 2em;
+		Xmargin-right: 2em;
+	margin-left: 2em;
 	text-decoration: none;
 }
 
 .wrapper #dumb {
 	height: 600px;
 	background: #fff;
+		Xborder-radius: 30px;
+		Xmargin-bottom: 5px;
 }
 
 .wrapper #footer { 
 	padding: 0 10px 0 20px;
-	background: #fff;
-	border-top: thin dashed #006;
+		Xbackground: #fff;
+	background-image: url(pics/tile.png);
+		Xborder-top: thin dashed #006;
+	margin-bottom: 10px;
+	border-bottom-right-radius: 30px;
+	border-bottom-left-radius: 30px;
 } 
 
 .wrapper #footer p {
 	margin: 0;
 	padding: 10px 0;
-	font-size: 9px;
+	font-size: 10px;
 	text-align: center;
 }
 
 .wrapper #footer p a {
-	color: #006;
-	text-decoration: none;
+	color: #000;
 	margin-right: 5em;
+	font-weight: bolder;
+	text-decoration: none;
+}
+
+.wrapper #extra {
+
+
 }
