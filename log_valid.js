@@ -8,7 +8,7 @@ function validate() //checks input individually
 		  //User name check
 		  var unameX = document.getElementById("loginForm").user.value;
 		  
-		  if ((registerInput == null) || (registerInput.length == 0)) //if there is no input
+		  if ((unameX == null) || (unameX.length == 0)) //if there is no input
 		  {
 			  document.alert("Please enter a valid user name!");
 			  valid_form = false; //flag error
@@ -17,7 +17,7 @@ function validate() //checks input individually
 		  log_details += " "; //add space to reg_details
 		  
 		  //Password creds, left simple
-		  var passwordX = document.getElementById("registerForm").password.value;
+		  var passwordX = document.getElementById("loginForm").password.value;
 		  if (passwordX.length <= 5)
 		  {
 			  document.alert("Please enter a valid password.\nMore than six characters.");

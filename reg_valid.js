@@ -9,7 +9,7 @@ function validate() //checks input individually
 		  //User name check
 		  var unameX = document.getElementById("registerForm").user.value;
 		  
-		  if ((registerInput == null) || (registerInput.length == 0)) //if there is no input
+		  if((unameX == null) || (unameX.length == 0)) //if there is no input
 		  {
 			  document.alert("Please enter a valid user name!");
 			  valid_form = false; //flag error
@@ -20,7 +20,7 @@ function validate() //checks input individually
 		  //First name check
 		  var fnameX = document.getElementById("registerForm").first.value;
 		  
-		  if ((registerInput == null) || (registerInput.length == 0)) //if there is no input
+		  if((fnameX == null) || (fnameX.length == 0)) //if there is no input
 		  {
 			  document.alert("Please enter a valid first name!");
 			  valid_form = false; //flag error
@@ -31,7 +31,7 @@ function validate() //checks input individually
 		  //Last name check
 		  var lnameX = document.getElementById("registerForm").last.value;
 		  
-		  if ((registerInput == null) || (registerInput.length == 0)) //if there is no input
+		  if ((lnameX == null) || (lnameX.length == 0)) //if there is no input
 		  {
 			  document.alert("Please enter a valid last name!");
 			  valid_form = false; //flag error
@@ -41,7 +41,7 @@ function validate() //checks input individually
 		  
 		  //Age Check
 		  var ageX = document.getElementById("registerForm").age.value; //sets the age value to the input var
-		  if ((registerInput == null) || (isNaN(registerInput)) || (registerInput.length ==0)) //if input is null or is not a number or is = 0
+		  if ((ageX == null) || (isNaN(ageX)) || (ageX.length ==0)) //if input is null or is not a number or is = 0
 		  {
 			  if (ageX <= 17 || ageX >= 90)
 			  {
@@ -62,7 +62,7 @@ function validate() //checks input individually
 		  
 		  //Email Check
 		  var emailX = document.getElementById("registerForm").email.value;
-		  if (email_check(registerInput) == false) //if the email field is false
+		  if (email_check(emailX) == false) //if the email field is false
 		  {
 			  document.alert("Please enter a valid e-mail.\nExample: cat@emails.com");
 			  valid_form = false; //flag error
@@ -82,12 +82,12 @@ function email_check(str)
 		  var lat = str.indexOf(at) //variable of the '@' symbol
 		  var lstr = str.length //length of the email string
 		  var ldot = str.indexOf(dot) //variable of the '.' symbol
-		  if (str.indexOf(at)==-1){ return false } //no '@' symbol
-		  if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){ return false } //no @ symbol or if the @ is null or if there is only the @ symbol
-		  if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){ return false } //no . symbol or if the . is null or if there is only the . symbol
-		  if (str.indexOf(at,(lat+1))!=-1){ return false }
-		  if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){ return false }
-		  if (str.indexOf(dot,(lat+2))==-1){ return false }
+		  if (str.indexOf(at) == -1){ return false } //no '@' symbol
+		  if (str.indexOf(at) == -1 || str.indexOf(at) == 0 || str.indexOf(at) == lstr){ return false } //no @ symbol or if the @ is null or if there is only the @ symbol
+		  if (str.indexOf(dot) == -1 || str.indexOf(dot) == 0 || str.indexOf(dot) == lstr){ return false } //no . symbol or if the . is null or if there is only the . symbol
+		  if (str.indexOf(at,(lat+1)) != -1){ return false }
+		  if (str.substring(lat-1,lat) == dot || str.substring(lat+1,lat+2) == dot){ return false }
+		  if (str.indexOf(dot,(lat+2)) == -1){ return false }
 		  if (str.indexOf(" ")!=-1){ return false } //if the first character is a space
 		  return true //return a true, meaning the email is checked with this function		
 }

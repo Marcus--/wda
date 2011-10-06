@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>template</title>
+	<link href = "basic_style.css" rel = "stylesheet" type = "text/css" />
+    <script type="text/javascript" src="search_valid.js"></script>
+</head>
+
+<body class = "wrapper">
+	<div id = "container">
+		<div id = "header">
+			<img src = "pics/logo.png" />
+		</div>
+    	<div id = "nav_bar">
+    		<p><a href="#">Home</a><a href="#">Search</a><a href="#">Sign In</a><a href="#">Register!</a></p>
+    	</div>
+    
+    	<!-- content here -->
+    	<div id = "dumb">
+        <br />
+        <form id="searchForm" onsubmit="return validate()" action="X" method="post">
+            	<fieldset>
+					<label>Arrive from: </label> <input class="form" type="radio" name="way" value="depart" /><br />
+					<label>Depart to: </label> <input class="form" type="radio" name="way" value="arrive" /><br />
+                    <label>City: </label> <input id="city" class="form" type="text" /><br /><br />
+                    <label>&nbsp;</label> <input class="form_button" type="submit" value="Search" />
+            	</fieldset>
+            </form>
+    	</div>
+    
+		<div id = "footer">
+			<p><a href = "">Last Avengers &copy; 2011, All Rights Reserved</a><a href = "">Privacy Policy</a><a href = "">Site Map</a></p>
+		</div>
+        <div id = "extra">
+        	<div id = "left">
+            	<h3>Infomation</h3>
+                <ul>
+	                <li><a href="">Sign In</a></li>
+                    <li><a href="">New Member</a></li>
+                	<li><a href="">Sitemap</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Search</a></li>
+					<li><a href="">Home</a></li>
+                    <li><a href="">Agency Sign In</a></li>
+                </ul>
+            </div>
+            <div id = "mid">
+                <h3>Agencies</h3>
+                <ul>
+                	<li><a href="">Flight Place</a></li>
+                    <li><a href="">Plane People</a></li>
+                    <li><a href="">Fly town</a></li>
+                    <li><a href="">Generic Agency</a></li>
+                </ul>
+            </div>
+            <div id = "right">
+            	<img src="pics/valid_css_blue.png" />
+                <br />
+                <img src="pics/valid_xhtml.png" />
+                <br />
+                <img src="pics/anybrowser.png" />
+                <br />
+                <img src="pics/phppow.gif" />
+            </div>
+        </div>
+	</div>
+</body>
+
+</html>
