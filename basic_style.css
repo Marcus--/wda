@@ -19,8 +19,8 @@ body {
 } 
 
 .wrapper #header { 
-		Xcolor: #00F;
-		Xbackground-color: #00F;
+		Xcolor: #00f;
+		Xbackground-color: #00f;
 	background-image: url(pics/tile.png);
 	height: 75px;
 		Xpadding: 0 10px 0 20px;
@@ -61,6 +61,36 @@ body {
 	background: #fff;
 		Xborder-radius: 30px;
 		Xmargin-bottom: 5px;
+}
+
+label {
+    display: block;
+   	width: 150px;
+    float: left;
+    margin-right: 20px;
+	margin-bottom: 1px;
+    text-align: right;
+		Xfont-weight: bold;
+	color: #000;
+}
+
+.form {
+	border: none;
+	background: #db9346;
+	color: #000;
+}
+
+.form_button {
+	border: solid 1px #000;
+    background: #db9346;
+}
+
+fieldset {
+	width: 60%;
+	color: #fff;
+	border: none;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .wrapper #footer { 
