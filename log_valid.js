@@ -1,32 +1,57 @@
-/* Purpose: js validation form for login */
+// Purpose: js validation form
+// Validation based off of http://www.tizag.com/javascriptT/javascriptform.php
+// http://developer.apple.com/internet/webcontent/validation.html
+// http://www.jslab.dk/tools.regex.php
 
-function validate() //checks input individually
-{
-		  var valid_form = false; //valid form false  
-		  var log_details = ""; //details for the login
-		  
-		  //User name check
-		  var unameX = document.getElementById("loginForm").user.value;
-		  
-		  if ((unameX == null) || (unameX.length == 0)) //if there is no input
-		  {
-			  document.alert("Please enter a valid user name!");
-			  valid_form = false; //flag error
-		  }
-		  log_details += unameX; //add unameX to reg_details
-		  log_details += " "; //add space to reg_details
-		  
-		  //Password creds, left simple
-		  var passwordX = document.getElementById("loginForm").password.value;
-		  if (passwordX.length <= 5)
-		  {
-			  document.alert("Please enter a valid password.\nMore than six characters.");
-			  valid_form = false; //flag error
-		  }
-		  log_details += passwordX; //add passwordX to log_details
-		  log_details += "\n"; //add newline to log_details
-		  
-		  valid_form = true; //flag from as true to process
-		  
-		  document.alert("DEBUG: Valid log details: " + log_details); // display debug
+function log_valid(){	
+	// Get the user input
+	var user=log_form.user.value;
+	var pass=log_form.pass.value;
+	var error=""; // Errors to be collected
+
+	// DEBUG
+	alert(user+"\n"+pass);
+	
+	// Validate in order, collecting errors
+	error += check_user(user);
+	error += check_pass(pass);
+	
+	// DEBUG
+	//alert("Submission error:\n"+error);
+	
+	if(error!=""){
+		alert("Form not submitted:\n"+error);
+		return false;
+	}else{
+		alert("Good form.\n");
+		return false;
+	}
+}
+
+// Simple checking functions
+
+// Username, 4-15, alpha
+function check_user(user){
+	var error=""; // Errors
+	var expression = /[a-zA-Z]/; //Alphabet
+	if(user=="") // Blank
+		error="Please enter a username.\n"
+	else if((user.length<=3)||(user.length>=16)) // 4-16
+    	error="Username must be four to 15 characters.\n";
+	else if(!expression.test(user)) // Alpha test
+		error="Usernames must be alphabetical.\n";
+	return error; // Return what's wrong
+}
+
+// Password, 6-10, alpha + numeric + _
+function check_pass(pass){
+	var error=""; // Errors
+	var expression=/[a-zA-Z]|\d|\s*/; //Numbers, letters and _
+	if(pass=="")
+		error="Please enter a password.\n"
+	else if((pass.length<=5)||(pass.length>=11)) // 6-10
+    	error="Passwords must be six to 10 characters.\n";
+	else if(!expression.test(pass)) // Passwords test
+		error="Accepted passwords can contain a-Z, 0-9 and spaces.\n";
+	return error; // Return what's wrong
 }

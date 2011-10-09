@@ -4,27 +4,28 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>template</title>
+	<title>Login</title>
 	<link href = "basic_style.css" rel = "stylesheet" type = "text/css" />
     <script type="text/javascript" src="log_valid.js"></script>
+    <style type="text/css">.wrapper #dumb{height:120px;}</style>
 </head>
 
 <body class = "wrapper">
 	<div id = "container">
 		<div id = "header">
-			<img src = "pics/logo.png" />
+			<img src = "pics/logo2.png" />
 		</div>
     	<div id = "nav_bar">
-    		<p><a href="#">Home</a><a href="#">Search</a><a href="#">Sign In</a><a href="#">Register!</a></p>
+    		<p><a href="home.htm">Home</a><a href="search.htm">Search</a><a href="log.htm">Sign In</a><a href="reg.htm">Register!</a></p>
     	</div>
     
     	<!-- content here -->
     	<div id = "dumb">
         <br />
-        <form id="loginForm" onsubmit="return validate()" action="X" method="post">
+        <form id="log_form" onsubmit="return log_valid()" action="_SUMBITTED_" method="post">
             	<fieldset>
 	                <label>Username: </label> <input id="user" class="form" type="text" /><br />
-                    <label>Password: </label> <input id="password" class="form" type="password" /><br /><br />  
+                    <label>Password: </label> <input id="pass" class="form" type="password" /><br /><br />  
                     <label>&nbsp;</label> <input class="form_button" type="submit" value="Login" />
             	</fieldset>
             </form>

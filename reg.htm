@@ -4,18 +4,19 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>template</title>
+	<title>Register</title>
 	<link href = "basic_style.css" rel = "stylesheet" type = "text/css" />
     <script type="text/javascript" src="reg_valid.js"></script>
+    <style type="text/css">.wrapper #dumb{height:210px;}</style>
 </head>
 
 <body class = "wrapper">
 	<div id = "container">
 		<div id = "header">
-			<img src = "pics/logo.png" />
+			<img src = "pics/logo2.png" />
 		</div>
     	<div id = "nav_bar">
-    		<p><a href="#">Home</a><a href="#">Search</a><a href="#">Sign In</a><a href="#">Register!</a></p>
+    		<p><a href="home.htm">Home</a><a href="search.htm">Search</a><a href="log.htm">Sign In</a><a href="reg.htm">Register!</a></p>
     	</div>
     
     	<!-- content here -->
@@ -23,15 +24,16 @@
         	<!-- Needs PHP work-->
             <!-- <p>Sign up to our site, all fields are manditory</p>-->
             <br />
-        	<form id="registerForm" onsubmit="return validate()" action="X" method="post">
+        	<form id="reg_form" onsubmit="return reg_valid()" action="_SUMBITTED_" method="post">
             	<fieldset>
 	                <label>Username: </label> <input id="user" class="form" type="text" /><br />
                     <label>First name: </label> <input type="text" class="form" id="first"/><br />
                     <label>Last name: </label> <input id="last" class="form" type="text" /><br />
                     <label>Age: </label> <input id="age" class="form" type="text" /><br />
-                    <label>Password: </label> <input id="password" class="form" type="password" /><br />     
+                    <label>Password: </label> <input id="pass" class="form" type="password" /><br />     
                     <label>E-mail: </label> <input id="email" class="form" type="text" /><br /><br />
-                    <label>&nbsp;</label> <input class="form_button" type="submit" value="Register" />&nbsp;<input class="form_button" type="reset" value="Clear" />
+                    <label>&nbsp;</label> <input class="form_button" type="submit" value="Register" />
+                    &nbsp;<input class="form_button" type="reset" value="Clear" />
             	</fieldset>
             </form>
     	</div>

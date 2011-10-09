@@ -22,9 +22,10 @@ body {
 		Xcolor: #00f;
 		Xbackground-color: #00f;
 	background-image: url(pics/tile.png);
+	background-repeat: repeat-x;
 	height: 75px;
 		Xpadding: 0 10px 0 20px;
-	margin-top: 10px;
+	margin-top: 20px;
 	border-top-left-radius: 30px;
 	border-top-right-radius: 30px;
 }
