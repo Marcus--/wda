@@ -5,56 +5,92 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Search</title>
-	<link href = "basic_style.css" rel = "stylesheet" type = "text/css" />
-    <script type="text/javascript" src="search_valid.js"></script>
-    <style type="text/css">.wrapper #dumb{height:400px;}</style>
+	<link href="basic_style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="search_valid.js"></script>
+	<style type="text/css">.wrapper #dumb{height:250px;}</style>
+	<script type="text/javascript" src="date_picker.js"></script>
+	<link href="date_picker.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body class = "wrapper">
 	<div id = "container">
 		<div id = "header">
-			<img src = "pics/logo2.png" />
+			<img src = "pics/logo3.png" />
 		</div>
     	<div id = "nav_bar">
-    		<p><a href="home.htm">Home</a><a href="search.htm">Search</a><a href="log.htm">Sign In</a><a href="reg.htm">Register!</a></p>
+    		<p><a href="home.htm">Home</a><a href="search.htm">Search</a>
+            <a href="log.htm">Sign In</a><a href="reg.htm">Not a member? <i>Register!</i></a></p>
     	</div>
     
     	<!-- content here -->
     	<div id = "dumb">
         <br />
-        <form id="search_form" onsubmit="return search_valid()" action="X" method="post">
+        <form id="search_form" onsubmit="return search_valid()" action="" method="post">
             	<fieldset>
-					<label>Arrive from: </label> <input class="form" type="radio" name="way" value="depart" /><br />
-					<label>Depart to: </label> <input class="form" type="radio" name="way" value="arrive" /><br />
-                    <label>City: </label> <input id="city" class="form" type="text" /><br /><br />
-                    <label>&nbsp;</label> <input class="form_button" type="submit" value="Search" />
+                	<label>Arrive from: </label>
+                    <select class="form" id="arrive">
+						<option value="melbourne">Melbourne</option>
+						<option value="sydney">Sydney</option>
+                        <option value="hobart">Hobart</option>
+                        <option value="canberra">Canberra</option>
+                        <option value="brisbane">Brisbane</option>
+                        <option value="adelaide">Adelaide</option>
+                        <option value="perth">Perth</option>
+                        <option value="darwin">Darwin</option>
+                        <option value="alice">Alice Springs</option>
+					</select><br />
+					<label>Depart to: </label>
+                    <select class="form" id="depart">
+						<option value="melbourne">Melbourne</option>
+						<option value="sydney">Sydney</option>
+                        <option value="hobart">Hobart</option>
+                        <option value="canberra">Canberra</option>
+                        <option value="brisbane">Brisbane</option>
+                        <option value="adelaide">Adelaide</option>
+                        <option value="perth">Perth</option>
+                        <option value="darwin">Darwin</option>
+                        <option value="alice">Alice Springs</option>
+					</select><br />
+                    <label>Airline: </label>
+                    <select class="form" id="airline">
+						<option value="qantas">Qantas</option>
+						<option value="tiger">Tiger Airways</option>
+                        <option value="jetstar">Jetstar</option>
+                        <option value="virgin">Virgin Australia</option>
+					</select><br />
+                    <label>Max price: ($)</label><input id="price" class="form" type="text" /><br />
+                    <label>Depart from: </label><input id="dep_from" class="form" type="text" readonly="readonly" name="dep_from" />
+                    <input type="button" class="form_button" value="Select" onclick="displayDatePicker('dep_from');"><br />
+                    <label>To: </label><input id="dep_to" class="form" type="text" readonly="readonly" name="dep_to" />
+                    <input type="button" class="form_button" value="Select" onclick="displayDatePicker('dep_to');"><br />
+                    <br />
+                    <label>&nbsp;</label><input class="form_button" type="submit" value="Search" />
             	</fieldset>
             </form>
     	</div>
     
 		<div id = "footer">
-			<p><a href = "">Last Avengers &copy; 2011, All Rights Reserved</a><a href = "">Privacy Policy</a><a href = "">Site Map</a></p>
+			<p><a href="home.htm">Last Avengers &copy; 2011, All Rights Reserved</a><a href="policy.htm">Privacy Policy</a><a href="site.htm">Site Map</a></p>
 		</div>
         <div id = "extra">
         	<div id = "left">
             	<h3>Infomation</h3>
                 <ul>
-	                <li><a href="">Sign In</a></li>
-                    <li><a href="">New Member</a></li>
-                	<li><a href="">Sitemap</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Search</a></li>
-					<li><a href="">Home</a></li>
-                    <li><a href="">Agency Sign In</a></li>
+	                <li><a href="log.htm">Sign In</a></li>
+                    <li><a href="reg.htm">New Member</a></li>
+                	<li><a href="site.htm">Sitemap</a></li>
+                    <li><a href="policy.htm">Privacy Policy</a></li>
+                    <li><a href="search.htm">Search</a></li>
+					<li><a href="home.htm">Home</a></li>
                 </ul>
             </div>
             <div id = "mid">
                 <h3>Agencies</h3>
                 <ul>
-                	<li><a href="">Flight Place</a></li>
-                    <li><a href="">Plane People</a></li>
-                    <li><a href="">Fly town</a></li>
-                    <li><a href="">Generic Agency</a></li>
+                	<li><a href="http://www.qantas.com.au/travel/airlines/about-qantas/global/en">Qantas</a></li>
+                    <li><a href="http://www.tigerairways.com/au/en/about_us.php">Tiger Airways</a></li>
+                    <li><a href="http://www.jetstar.com/au/en/about-us/our-company">Jetstar</a></li>
+                    <li><a href="http://www.virginaustralia.com/AboutUs/index.htm">Virgin Australia</a></li>
                 </ul>
             </div>
             <div id = "right">

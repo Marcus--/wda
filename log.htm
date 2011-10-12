@@ -4,25 +4,26 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Login</title>
-	<link href = "basic_style.css" rel = "stylesheet" type = "text/css" />
-    <script type="text/javascript" src="log_valid.js"></script>
-    <style type="text/css">.wrapper #dumb{height:120px;}</style>
+	<title>Search</title>
+	<link href="basic_style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="log_valid.js"></script>
+	<style type="text/css">.wrapper #dumb{height:160px;}</style>
 </head>
 
 <body class = "wrapper">
 	<div id = "container">
 		<div id = "header">
-			<img src = "pics/logo2.png" />
+			<img src = "pics/logo3.png" />
 		</div>
     	<div id = "nav_bar">
-    		<p><a href="home.htm">Home</a><a href="search.htm">Search</a><a href="log.htm">Sign In</a><a href="reg.htm">Register!</a></p>
+    		<p><a href="home.htm">Home</a><a href="search.htm">Search</a>
+            <a href="log.htm">Sign In</a><a href="reg.htm">Not a member? <i>Register!</i></a></p>
     	</div>
     
     	<!-- content here -->
     	<div id = "dumb">
         <br />
-        <form id="log_form" onsubmit="return log_valid()" action="_SUMBITTED_" method="post">
+        <form id="log_form" onsubmit="return log_valid()" action="" method="post">
             	<fieldset>
 	                <label>Username: </label> <input id="user" class="form" type="text" /><br />
                     <label>Password: </label> <input id="pass" class="form" type="password" /><br /><br />  
@@ -32,28 +33,27 @@
     	</div>
     
 		<div id = "footer">
-			<p><a href = "">Last Avengers &copy; 2011, All Rights Reserved</a><a href = "">Privacy Policy</a><a href = "">Site Map</a></p>
+			<p><a href="home.htm">Last Avengers &copy; 2011, All Rights Reserved</a><a href="policy.htm">Privacy Policy</a><a href="site.htm">Site Map</a></p>
 		</div>
         <div id = "extra">
         	<div id = "left">
             	<h3>Infomation</h3>
                 <ul>
-	                <li><a href="">Sign In</a></li>
-                    <li><a href="">New Member</a></li>
-                	<li><a href="">Sitemap</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Search</a></li>
-					<li><a href="">Home</a></li>
-                    <li><a href="">Agency Sign In</a></li>
+	                <li><a href="log.htm">Sign In</a></li>
+                    <li><a href="reg.htm">New Member</a></li>
+                	<li><a href="site.htm">Sitemap</a></li>
+                    <li><a href="policy.htm">Privacy Policy</a></li>
+                    <li><a href="search.htm">Search</a></li>
+					<li><a href="home.htm">Home</a></li>
                 </ul>
             </div>
             <div id = "mid">
                 <h3>Agencies</h3>
                 <ul>
-                	<li><a href="">Flight Place</a></li>
-                    <li><a href="">Plane People</a></li>
-                    <li><a href="">Fly town</a></li>
-                    <li><a href="">Generic Agency</a></li>
+                	<li><a href="http://www.qantas.com.au/travel/airlines/about-qantas/global/en">Qantas</a></li>
+                    <li><a href="http://www.tigerairways.com/au/en/about_us.php">Tiger Airways</a></li>
+                    <li><a href="http://www.jetstar.com/au/en/about-us/our-company">Jetstar</a></li>
+                    <li><a href="http://www.virginaustralia.com/AboutUs/index.htm">Virgin Australia</a></li>
                 </ul>
             </div>
             <div id = "right">

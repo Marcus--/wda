@@ -10,7 +10,7 @@ function log_valid(){
 	var error=""; // Errors to be collected
 
 	// DEBUG
-	alert(user+"\n"+pass);
+	//alert(user+"\n"+pass);
 	
 	// Validate in order, collecting errors
 	error += check_user(user);
@@ -23,8 +23,8 @@ function log_valid(){
 		alert("Form not submitted:\n"+error);
 		return false;
 	}else{
-		alert("Good form.\n");
-		return false;
+		//alert("Good form.\n");
+		return true;
 	}
 }
 
@@ -33,7 +33,7 @@ function log_valid(){
 // Username, 4-15, alpha
 function check_user(user){
 	var error=""; // Errors
-	var expression = /[a-zA-Z]/; //Alphabet
+	var expression=/^[a-zA-Z]*$/; //Alphabet
 	if(user=="") // Blank
 		error="Please enter a username.\n"
 	else if((user.length<=3)||(user.length>=16)) // 4-16
@@ -46,7 +46,7 @@ function check_user(user){
 // Password, 6-10, alpha + numeric + _
 function check_pass(pass){
 	var error=""; // Errors
-	var expression=/[a-zA-Z]|\d|\s*/; //Numbers, letters and _
+	var expression='/^[a-zA-Z0-9 ]*$/'; //Numbers, letters and _
 	if(pass=="")
 		error="Please enter a password.\n"
 	else if((pass.length<=5)||(pass.length>=11)) // 6-10
