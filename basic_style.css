@@ -65,11 +65,17 @@ body {
 	Xclear: both;
 }
 
+.wrapper a:link, a:visited, a:active, a:hover {
+	color: #105b63;
+	text-decoration: none;
+}
+
 #dumb p {
 	color: #000;
 	padding-left: 10px;
 	padding-right: 10px;
 	font-size: 11px;
+	text-align: justify;
 }
 
 .right_image{
