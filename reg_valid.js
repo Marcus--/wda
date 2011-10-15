@@ -23,7 +23,7 @@ function reg_valid(){
 	error += check_first(first);
 	error += check_last(last);
 	error += check_age(age);
-	error += check_pass(pass);
+	//error += check_pass(pass);
 	//error += check_email(email);
 	
 	// DEBUG
